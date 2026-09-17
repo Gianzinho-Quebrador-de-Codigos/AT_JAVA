@@ -3,6 +3,7 @@ package org.example;
 import java.util.Scanner;
 
 public class Ex12 {
+    // Guarda dez mensagens alternadas entre duas pessoas e mostra o histórico.
     static void main() {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Insira o nome do primeiro usuário: ");
@@ -16,6 +17,7 @@ public class Ex12 {
             System.out.print(usuarioA + ", digite sua mensagem: ");
             mensagens[i] = scanner.nextLine();
 
+            // Avança para a segunda pessoa; o for avança de novo ao terminar a volta.
             i++;
 
             if (i < mensagens.length) {
@@ -28,6 +30,7 @@ public class Ex12 {
         for (int i = 0; i < mensagens.length; i++) {
             System.out.println(usuarioA + ": " + mensagens[i]);
 
+            // Avança para a segunda pessoa; o for avança de novo ao terminar a volta.
             i++;
 
             if (i < mensagens.length){

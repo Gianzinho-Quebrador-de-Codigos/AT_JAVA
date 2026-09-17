@@ -1,6 +1,7 @@
 package org.example;
 
 public class MainVeiculosEx6 {
+    // Cria dois veículos, registra viagens e mostra a quilometragem de cada um.
     static void main() {
         Veiculo bugatti = new Veiculo();
         bugatti.placa = "ABC123";

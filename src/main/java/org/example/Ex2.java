@@ -3,6 +3,7 @@ package org.example;
 import java.util.Scanner;
 
 public class Ex2 {
+    // Pede uma senha até ela cumprir as regras de tamanho e caracteres.
     static void main() {
         Scanner scanner = new Scanner(System.in);
 
@@ -20,6 +21,7 @@ public class Ex2 {
             boolean numero = false;
             boolean caracterEs = false;
 
+            // Verifica se a senha tem letra maiúscula, número e caractere especial.
             for(int i = 0; i < senha.length(); i++){
                 char b = senha.charAt(i);
 
@@ -36,6 +38,7 @@ public class Ex2 {
                 }
             }
 
+            // Mostra a primeira regra que falhou ou aceita a senha.
             if (senha.length() < 8) {
                 System.out.println("A senha deve ter no mínimo 8 caracteres.");
             } else if (!maiuscula) {

@@ -6,6 +6,7 @@ public class Veiculo {
     int anoFabricacao;
     double quilometragem;
 
+    // Mostra os dados do veículo.
     public void exibirDetalhes(){
         System.out.println("Veiculo{" +
                 "placa='" + placa + '\'' +
@@ -15,6 +16,7 @@ public class Veiculo {
                 '}');
     }
 
+    // Soma a distância da viagem à quilometragem do veículo.
     public void registrarViagem(double km){
         quilometragem += km;
     }

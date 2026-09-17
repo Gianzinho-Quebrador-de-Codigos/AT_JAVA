@@ -3,6 +3,7 @@ package org.example;
 import java.util.Scanner;
 
 public class Ex3 {
+    // Calcula o imposto simplificado do exercício e o salário líquido anual.
     static void main() {
         Scanner scanner = new Scanner(System.in);
 
@@ -10,8 +11,10 @@ public class Ex3 {
         String nome = scanner.nextLine();
 
         System.out.println("Informe seu salário mensal:");
+        // Multiplica o salário mensal por 12 para obter o valor anual.
         double salario = scanner.nextDouble() * 12;
 
+        // Aplica a porcentagem da faixa correspondente sobre o salário anual.
         double imposto = 0;
         if (salario >= 22847.77 && salario <= 33919.80){
             imposto = salario * 0.075;

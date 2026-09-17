@@ -7,11 +7,13 @@ public class Aluno {
     double notaB;
     double notaC;
 
+    // Calcula a média das três notas.
     public double calcularMedia(){
         double media = (notaA + notaB + notaC) / 3;
         return  media;
     }
 
+    // Mostra se o aluno foi aprovado, usando a média mínima de 7.
     public void varificarAprovacao(){
 
         double media = calcularMedia();

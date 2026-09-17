@@ -3,6 +3,7 @@ package org.example;
 import java.util.Scanner;
 
 public class Ex4 {
+    // Calcula o total e as parcelas de um empréstimo com juros simples.
     static void main() {
         Scanner scanner = new Scanner(System.in);
 
@@ -15,12 +16,14 @@ public class Ex4 {
         System.out.println("Em quantas parcelas deseja pagar? (6 a 48)");
         int parcelas = scanner.nextInt();
 
+        // Pede novamente enquanto a quantidade de parcelas estiver fora de 6 a 48.
         while (parcelas < 6 || parcelas > 48) {
             System.out.println("Número de parcelas inválido.");
             System.out.println("Digite um valor entre 6 e 48:");
             parcelas = scanner.nextInt();
         }
 
+        // Calcula juros simples de 3% por parcela sobre o valor emprestado.
         double juros = emprestimo * 0.03 * parcelas;
         double valorTotal = emprestimo + juros;
         double valorParcela = valorTotal / parcelas;
