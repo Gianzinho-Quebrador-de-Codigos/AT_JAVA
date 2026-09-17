@@ -9,24 +9,21 @@ public class Ex3 {
         System.out.println("Informe seu nome:");
         String nome = scanner.nextLine();
 
-        System.out.println("Informe o valor do empréstimo:");
-        double emprestimo = scanner.nextDouble();
+        System.out.println("Informe seu salário mensal:");
+        double salario = scanner.nextDouble() * 12;
 
-        System.out.println("Em quantas parcelas deseja pagar? (6 a 48)");
-        int parcelas = scanner.nextInt();
-
-        while (parcelas < 6 || parcelas > 48) {
-            System.out.println("Número de parcelas inválido.");
-            System.out.println("Digite um valor entre 6 e 48:");
-            parcelas = scanner.nextInt();
+        double imposto = 0;
+        if (salario >= 22847.77 && salario <= 33919.80){
+            imposto = salario * 0.075;
+        } else if (salario >= 33919.81 && salario <= 45012.60) {
+            imposto = salario * 0.15;
+        } else if (salario >= 45012.61) {
+            imposto = salario * 0.275;
         }
+        double salarioLiq = salario - imposto;
 
-        double juros = emprestimo * 0.03 * parcelas;
-        double valorTotal = emprestimo + juros;
-        double valorParcela = valorTotal / parcelas;
-
-        System.out.printf("Valor total pago: %.2f%n", valorTotal);
-        System.out.printf("Valor da parcela mensal: %.2f%n", valorParcela);
+        System.out.printf("Imposto: %.2f%n", imposto);
+        System.out.printf("Salário líquido: %.2f%n", salarioLiq);
 
     }
 }

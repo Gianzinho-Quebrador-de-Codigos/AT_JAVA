@@ -6,24 +6,49 @@ public class Ex2 {
     static void main() {
         Scanner scanner = new Scanner(System.in);
 
-        System.out.println("Informe seu nome:");
+        System.out.print("Digite seu nome: ");
         String nome = scanner.nextLine();
 
-        System.out.println("Informe seu salário mensal:");
-        double salario = scanner.nextDouble() * 12;
+        boolean senhaOk = false;
 
-        double imposto = 0;
-        if (salario >= 22847.77 && salario <= 33919.80){
-            imposto = salario * 0.075;
-        } else if (salario >= 33919.81 && salario <= 45012.60) {
-            imposto = salario * 0.15;
-        } else if (salario >= 45012.61) {
-            imposto = salario * 0.275;
+        while (!senhaOk){
+
+            System.out.println("Digite sua senha: ");
+            String senha = scanner.nextLine();
+
+            boolean maiuscula = false;
+            boolean numero = false;
+            boolean caracterEs = false;
+
+            for(int i = 0; i < senha.length(); i++){
+                char b = senha.charAt(i);
+
+                if(Character.isUpperCase(b)){
+                    maiuscula = true;
+                }
+
+                if(Character.isDigit(b)){
+                    numero = true;
+                }
+
+                if(!Character.isLetterOrDigit(b)){
+                    caracterEs = true;
+                }
+            }
+
+            if (senha.length() < 8) {
+                System.out.println("A senha deve ter no mínimo 8 caracteres.");
+            } else if (!maiuscula) {
+                System.out.println("A senha deve conter pelo menos uma letra maiúscula.");
+            } else if (!numero) {
+                System.out.println("A senha deve conter pelo menos um número.");
+            } else if (!caracterEs) {
+                System.out.println("A senha deve conter pelo menos um caractere especial.");
+            } else {
+                senhaOk = true;
+                System.out.println("Senha válida");
+            }
         }
-        double salarioLiq = salario - imposto;
-
-        System.out.println("Imposto: " + imposto);
-        System.out.println("Salário líquido: " + salarioLiq);
 
     }
 }
