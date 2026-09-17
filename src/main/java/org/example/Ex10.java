@@ -9,6 +9,7 @@ public class Ex10 {
 
     static void main() throws IOException{
         Scanner scanner = new Scanner(System.in);
+
         FileWriter arquivo = new FileWriter("compras.txt");
 
         for (int i = 0; i < 3; i++) {
