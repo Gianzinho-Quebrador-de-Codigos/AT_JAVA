@@ -1,6 +1,6 @@
 package org.example;
 
-public class MainAluno {
+public class MainAlunoEx7 {
     static void main() {
         Aluno aluno = new Aluno();
         aluno.nome = "João";

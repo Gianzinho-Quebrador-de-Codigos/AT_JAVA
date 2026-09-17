@@ -1,6 +1,6 @@
 package org.example;
 
-public class MainContaBancaria {
+public class MainContaBancariaEx9 {
     static void main() {
         ContaBancaria conta = new ContaBancaria("Gianlucca", 5000);
 

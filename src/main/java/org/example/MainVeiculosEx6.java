@@ -1,6 +1,6 @@
 package org.example;
 
-public class MainVeiculos {
+public class MainVeiculosEx6 {
     static void main() {
         Veiculo bugatti = new Veiculo();
         bugatti.placa = "ABC123";
